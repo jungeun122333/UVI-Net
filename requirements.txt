@@ -1,0 +1,11 @@
+lpips==0.1.4
+natsort==8.4.0
+nibabel==5.2.1
+numpy==1.23.5
+opencv_python==4.8.0.76
+Pillow==10.2.0
+pystrum==0.4
+scipy==1.12.0
+scikit-image==0.21.0
+tqdm==4.65.0
+wandb==0.16.3
