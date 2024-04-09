@@ -1,5 +1,11 @@
 # Data-Efficient Unsupervised Interpolation Without Any Intermediate Frame for 4D Medical Images (CVPR 2024)
 
+[![arXiv](https://img.shields.io/badge/arXiv-2404.01464-b31b1b.svg)](https://arxiv.org/abs/2404.01464)
+> **Data-Efficient Unsupervised Interpolation Without Any Intermediate Frame for 4D Medical Images**<br>
+> JungEun Kim*, Hangyul Yoon*, Geondo Park, Kyungsu Kim, Eunho Yang <br>
+
+>**Abstract**: <br>
+> 4D medical images, which represent 3D images with temporal information, are crucial in clinical practice for capturing dynamic changes and monitoring long-term disease progression. However, acquiring 4D medical images poses challenges due to factors such as radiation exposure and imaging duration, necessitating a balance between achieving high temporal resolution and minimizing adverse effects. Given these circumstances, not only is data acquisition challenging, but increasing the frame rate for each dataset also proves difficult. To address this challenge, this paper proposes a simple yet effective **U**nsupervised **V**olumetric **I**nterpolation framework, UVI-Net. This framework facilitates temporal interpolation without the need for any intermediate frames, distinguishing it from the majority of other existing unsupervised methods. Experiments on benchmark datasets demonstrate significant improvements across diverse evaluation metrics compared to unsupervised and supervised baselines. Remarkably, our approach achieves this superior performance even when trained with a dataset as small as one, highlighting its exceptional robustness and efficiency in scenarios with sparse supervision. This positions UVI-Net as a compelling alternative for 4D medical imaging, particularly in settings where data availability is limited.
 
 ## ⚒️ Requirements
 ### Installation
