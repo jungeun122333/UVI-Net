@@ -65,7 +65,9 @@ The final data structure should be as follows:
 └── dataset
     ├── ACDC
     │   └── (same as above)
-    └── 4D-Lung
+    ├── 4D-Lung
+    │   └── (same as above)
+    └── 4D-Lung-Preprocessed
         ├── 100_0
         │   ├── ct_100_0_frame0.nii.gz
         │   │             :
