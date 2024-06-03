@@ -7,6 +7,22 @@
 >**Abstract**: <br>
 > 4D medical images, which represent 3D images with temporal information, are crucial in clinical practice for capturing dynamic changes and monitoring long-term disease progression. However, acquiring 4D medical images poses challenges due to factors such as radiation exposure and imaging duration, necessitating a balance between achieving high temporal resolution and minimizing adverse effects. Given these circumstances, not only is data acquisition challenging, but increasing the frame rate for each dataset also proves difficult. To address this challenge, this paper proposes a simple yet effective **U**nsupervised **V**olumetric **I**nterpolation framework, UVI-Net. This framework facilitates temporal interpolation without the need for any intermediate frames, distinguishing it from the majority of other existing unsupervised methods. Experiments on benchmark datasets demonstrate significant improvements across diverse evaluation metrics compared to unsupervised and supervised baselines. Remarkably, our approach achieves this superior performance even when trained with a dataset as small as one, highlighting its exceptional robustness and efficiency in scenarios with sparse supervision. This positions UVI-Net as a compelling alternative for 4D medical imaging, particularly in settings where data availability is limited.
 
+<div align='center'>
+    <img src='assets/main_figure.png' width='800px'>
+</div>
+
+### Quantitative Results 
+<div align='center'>
+    <img src='assets/main_result1.png' width='800px'>
+    <img src='assets/main_result2.png' width='800px'>
+</div>
+
+### Qualitative Results (Compared with Top-3 Baselines)
+<div align='center'>
+  <img src=assets/cardiac.gif width='800px'>
+  <img src=assets/lung.gif width='800px'> 
+</div>
+
 ## ⚒️ Requirements
 ### Installation
 prerequisites: `python>=3.8` and `torch>=1.11`.
@@ -98,4 +114,11 @@ python evaluate.py --dataset lung
 
 If you make use of our work, please cite our paper:
 
-TBD
+```bibtex
+@article{kim2024data,
+  title={Data-Efficient Unsupervised Interpolation Without Any Intermediate Frame for 4D Medical Images},
+  author={Kim, JungEun and Yoon, Hangyul and Park, Geondo and Kim, Kyungsu and Yang, Eunho},
+  journal={arXiv preprint arXiv:2404.01464},
+  year={2024}
+}
+```
