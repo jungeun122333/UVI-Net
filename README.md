@@ -115,10 +115,11 @@ python evaluate.py --dataset lung
 If you make use of our work, please cite our paper:
 
 ```bibtex
-@article{kim2024data,
+@inproceedings{kim2024data,
   title={Data-Efficient Unsupervised Interpolation Without Any Intermediate Frame for 4D Medical Images},
   author={Kim, JungEun and Yoon, Hangyul and Park, Geondo and Kim, Kyungsu and Yang, Eunho},
-  journal={arXiv preprint arXiv:2404.01464},
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  pages={11353--11364},
   year={2024}
 }
 ```
