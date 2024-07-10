@@ -139,7 +139,7 @@ def main(args):
     lpips_log = utils.AverageMeter()
     ssim_log = utils.AverageMeter()
 
-    for idx, data in enumerate(val_loader):
+    for data_idx, data in enumerate(val_loader):
         data = [t.cuda() for t in data]
         i0 = data[0]
         i1 = data[1]
@@ -235,7 +235,6 @@ if __name__ == "__main__":
     parser = ArgumentParser()
 
     parser.add_argument("--seed", type=int, default=0)
-    parser.add_argument("--trial", type=str, default="")
     parser.add_argument("--gpu", type=str, default=None)
 
     parser.add_argument(
