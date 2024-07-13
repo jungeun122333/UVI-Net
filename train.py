@@ -223,17 +223,17 @@ def main(args):
                     x_feat_a3_1_list,
                 ) = ([], [], [], [])
 
-                for idx in range(len(x_feat_a1_list)):
+                for feat_idx in range(len(x_feat_a1_list)):
                     reg_model_feat = utils.register_model(
-                        tuple([x // (2**idx) for x in img_size])
+                        tuple([x // (2**feat_idx) for x in img_size])
                     )
                     x_feat_a1_0_list.append(
                         reg_model_feat(
                             [
-                                x_feat_a1_list[idx],
+                                x_feat_a1_list[feat_idx],
                                 F.interpolate(
-                                    flow_a1_0 * (0.5 ** (idx)),
-                                    scale_factor=0.5 ** (idx),
+                                    flow_a1_0 * (0.5 ** (feat_idx)),
+                                    scale_factor=0.5 ** (feat_idx),
                                 ).float(),
                             ]
                         )
@@ -241,10 +241,10 @@ def main(args):
                     x_feat_a2_0_list.append(
                         reg_model_feat(
                             [
-                                x_feat_a2_list[idx],
+                                x_feat_a2_list[feat_idx],
                                 F.interpolate(
-                                    flow_a2_0 * (0.5 ** (idx)),
-                                    scale_factor=0.5 ** (idx),
+                                    flow_a2_0 * (0.5 ** (feat_idx)),
+                                    scale_factor=0.5 ** (feat_idx),
                                 ).float(),
                             ]
                         )
@@ -252,10 +252,10 @@ def main(args):
                     x_feat_a2_1_list.append(
                         reg_model_feat(
                             [
-                                x_feat_a2_list[idx],
+                                x_feat_a2_list[feat_idx],
                                 F.interpolate(
-                                    flow_a2_1 * (0.5 ** (idx)),
-                                    scale_factor=0.5 ** (idx),
+                                    flow_a2_1 * (0.5 ** (feat_idx)),
+                                    scale_factor=0.5 ** (feat_idx),
                                 ).float(),
                             ]
                         )
@@ -263,10 +263,10 @@ def main(args):
                     x_feat_a3_1_list.append(
                         reg_model_feat(
                             [
-                                x_feat_a3_list[idx],
+                                x_feat_a3_list[feat_idx],
                                 F.interpolate(
-                                    flow_a3_1 * (0.5 ** (idx)),
-                                    scale_factor=0.5 ** (idx),
+                                    flow_a3_1 * (0.5 ** (feat_idx)),
+                                    scale_factor=0.5 ** (feat_idx),
                                 ).float(),
                             ]
                         )
@@ -373,10 +373,6 @@ def main(args):
     wandb.finish()
 
 
-def save_checkpoint(state, save_dir="models", filename="checkpoint.pth.tar"):
-    torch.save(state, save_dir + filename)
-
-
 if __name__ == "__main__":
     parser = ArgumentParser()
 
@@ -396,7 +392,6 @@ if __name__ == "__main__":
     parser.add_argument("--weight_ncc", type=float, default=1.0)
     parser.add_argument("--weight_cha", type=float, default=1.0)
     parser.add_argument("--feature_extract", action="store_true", default=True)
-    parser.add_argument("--name", type=str, default="")
 
     args = parser.parse_args()
 
