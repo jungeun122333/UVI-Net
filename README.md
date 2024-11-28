@@ -1,6 +1,8 @@
 # Data-Efficient Unsupervised Interpolation Without Any Intermediate Frame for 4D Medical Images (CVPR 2024)
 
 [![arXiv](https://img.shields.io/badge/arXiv-2404.01464-b31b1b.svg)](https://arxiv.org/abs/2404.01464)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.14238626.svg)](https://doi.org/10.5281/zenodo.14238626)
+
 > **Data-Efficient Unsupervised Interpolation Without Any Intermediate Frame for 4D Medical Images**<br>
 > JungEun Kim*, Hangyul Yoon*, Geondo Park, Kyungsu Kim, Eunho Yang <br>
 
